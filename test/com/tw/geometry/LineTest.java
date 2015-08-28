@@ -14,8 +14,15 @@ public class LineTest {
     }
 
     @Test
-    public void shouldHaveActualLengthLineParallelXAxis() {
+    public void shouldHaveActualLengthForLineParallelToXAxis() {
         assertEquals(1, new Line(1, 0, 1, 1).length(), 0.0);
     }
+
+    @Test
+    public void shouldHaveActualLengthForLineParallelToYAxis() {
+        assertEquals(1, new Line(1, 1, 2, 1).length(), 0.0);
+    }
+
+
 
 }
