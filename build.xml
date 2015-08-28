@@ -1,6 +1,6 @@
 <?xml version = "1.0"?>
 <project>
-    <target name="build" depends="clean">
+    <target name="compile" depends="clean">
         <mkdir dir="out"/>
         <javac destdir="out">
             <src path="src;test"/>
@@ -12,17 +12,22 @@
         <delete dir="out"/>
     </target>
 
-    <target name="runjUnit" depends="build">
-        <junit printsummary="yes" haltonfailure="true" showoutput="true" outputtoformatters="true">
+    <target name="build">
+        <junit printsummary="true"
+               haltonfailure="true"
+               showoutput="true"
+               outputtoformatters="true">
             <classpath>
                 <pathelement location="lib/junit-4.11.jar"/>
                 <pathelement location="lib/hamcrest-core-1.3.jar"/>
+                <pathelement location="out/com/tw/geometry"/>
             </classpath>
-            <batchtest fork="yes">
-            <fileset dir="test">
-                <include name="LineTest.java"/>
-            </fileset>
-            </batchtest>
+            <test name="com.twu.geometry.LineTest.java"
+                  haltonfailure="yes" outfile="result">
+                <formatter type="plain"/>
+                <formatter type="xml"/>
+            </test>
+
         </junit>
     </target>
 
