@@ -1,6 +1,11 @@
 <?xml version = "1.0"?>
-<project>
-    <target name="compile" depends="clean">
+<project name = "Line" default="runjUnit" basedir=".">
+
+    <property name = "project.name" value="Line" />
+    <property name = "main.name" value="LineTest" />
+    <property name = "package.name" value="com.tw.geometry" />
+
+    <target name="build" depends="clean">
         <mkdir dir="out"/>
         <javac destdir="out">
             <src path="src;test"/>
@@ -8,27 +13,33 @@
         </javac>
     </target>
 
-    <target name="clean">
+    <target name="clean" description="clean previous output directory">
         <delete dir="out"/>
     </target>
 
-    <target name="build">
-        <junit printsummary="true"
-               haltonfailure="true"
-               showoutput="true"
-               outputtoformatters="true">
+    <target name="build-jar" depends="build">
+        <jar destfile="lib/${project.name}.jar"
+             basedir="out"
+             excludes="**/Test.class">
+            <manifest>
+                <attribute name="Main-Class" value="${package.name}.main.${main.name}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="runjUnit" depends="build">
+        <junit printsummary="yes" haltonfailure="true">
             <classpath>
                 <pathelement location="lib/junit-4.11.jar"/>
                 <pathelement location="lib/hamcrest-core-1.3.jar"/>
-                <pathelement location="out/com/tw/geometry"/>
+                <pathelement location="out"/>
             </classpath>
-            <test name="com.twu.geometry.LineTest"
-                  haltonfailure="yes" outfile="result">
-                <formatter type="plain"/>
-                <formatter type="xml"/>
-            </test>
-
+            <batchtest fork="yes">
+                <formatter type="plain" usefile="false"/>
+                <fileset dir="test">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
         </junit>
     </target>
-
 </project>

@@ -28,5 +28,18 @@ public class LineTest {
         assertEquals(sqrt(2), new Line(1, 1, 2, 2).length(), 0.0);
     }
 
+    @Test
+    public void equalsItself() {
+        Line line = new Line(1, 1, 2, 2);
+        assertEquals(line, line);
+    }
+
+    @Test
+    public void unequalsEmptyObject() {
+        Line line = new Line(1, 1, 2, 2);
+        assertNotEquals(line, null);
+    }
+
+
 
 }
