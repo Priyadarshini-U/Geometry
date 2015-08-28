@@ -31,21 +31,30 @@ public class LineTest {
     @Test
     public void equalsItself() {
         Line line = new Line(1, 1, 2, 2);
+
         assertEquals(line, line);
     }
 
     @Test
     public void unequalsEmptyObject() {
         Line line = new Line(1, 1, 2, 2);
+
         assertNotEquals(line, null);
     }
 
     @Test
     public void unequalsInvalidObject() {
         Line line = new Line(1, 1, 2, 2);
+
         assertNotEquals(line, new Object());
     }
 
+    @Test
+    public void equalsLineWithSameXCoordinates() {
+        Line line1 = new Line(1, 1, 2, 2);
+        Line line2 = new Line(1, 1, 2, 2);
 
+        assertEquals(line1, line2);
+    }
 
 }

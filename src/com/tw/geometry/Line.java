@@ -24,8 +24,12 @@ public class Line {
         if(that == null)
             return false;
         Line thatLine = that instanceof Line ? (Line) that: null;
-        if(thatLine == null)
-            return false;
+        if(thatLine != null){
+            if( this.x1 == thatLine.x1 && this.x2 == thatLine.x2)
+                return true;
+        }
+
+
         return false;
     }
 
