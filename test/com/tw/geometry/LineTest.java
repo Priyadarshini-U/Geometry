@@ -8,6 +8,9 @@ import static java.lang.Math.*;
 
 public class LineTest {
 
+    Line line1 = new Line(1, 1, 2, 2);
+    Line line2 = new Line(1, 1, 2, 2);
+
     @Test
     public void shouldHaveLengthZeroForLineWithSameCoordinates() {
         assertEquals(0, new Line(0, 0, 0, 0).length(), 0.0);
@@ -86,6 +89,16 @@ public class LineTest {
         Line line1 = new Line(1, 1, 2, 2);
         Line line2 = new Line(2, 2, 1, 1);
 
+        assertEquals(line1, line2);
+    }
+
+    @Test
+    public void equatesLine() {
+        assertEquals(line1, line2);
+    }
+
+    @Test
+    public void equalsLineThatEquatesToThisPoint() {
         assertEquals(line1, line2);
     }
 
