@@ -31,6 +31,8 @@ public class Line {
                 return true;
             if(this.y1 == thatLine.y1 && this.y2 == thatLine.y2)
                 return true;
+            if(this.y1 == thatLine.y2 && this.y2 == thatLine.y1)
+                return true;
         }
         return false;
     }
