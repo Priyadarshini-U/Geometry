@@ -5,7 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static java.lang.Math.*;
 
-
 public class LineTest {
 
     Line line1 = new Line(1, 1, 2, 2);
@@ -13,22 +12,30 @@ public class LineTest {
 
     @Test
     public void shouldHaveLengthZeroForLineWithSameCoordinates() {
-        assertEquals(0, new Line(0, 0, 0, 0).length(), 0.0);
+        Line line = new Line(0, 0, 0, 0);
+
+        assertEquals(0, line.length(), 0.0);
     }
 
     @Test
     public void shouldHaveActualLengthForLineParallelToXAxis() {
-        assertEquals(1, new Line(1, 0, 1, 1).length(), 0.0);
+        Line line = new Line(1, 0, 1, 1);
+
+        assertEquals(1, line.length(), 0.0);
     }
 
     @Test
     public void shouldHaveActualLengthForLineParallelToYAxis() {
-        assertEquals(1, new Line(1, 1, 2, 1).length(), 0.0);
+        Line line = new Line(1, 1, 2, 1);
+
+        assertEquals(1, line.length(), 0.0);
     }
 
     @Test
     public void shouldHaveActualLengthForLineNotParallelToXAndYAxis() {
-        assertEquals(sqrt(2), new Line(1, 1, 2, 2).length(), 0.0);
+        Line line = new Line(1, 1, 2, 2);
+
+        assertEquals(sqrt(2), line.length(), 0.0);
     }
 
     @Test
@@ -111,5 +118,4 @@ public class LineTest {
     public void equalsHashCodeWithSimilarAndEqualLine() {
         assertEquals(line1.hashCode(), line2.hashCode());
     }
-
 }

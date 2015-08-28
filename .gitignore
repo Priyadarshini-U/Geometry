@@ -2,7 +2,5 @@
 .idea/
 out/
 .Ds_store
-~*
-*.swp
 result.*
 TEST-*

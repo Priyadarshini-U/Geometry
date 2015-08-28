@@ -1,9 +1,9 @@
 <?xml version = "1.0"?>
-<project name = "Line" default="runjUnit" basedir=".">
+<project name="Line" default="runjUnit" basedir=".">
 
-    <property name = "project.name" value="Line" />
-    <property name = "main.name" value="LineTest" />
-    <property name = "package.name" value="com.tw.geometry" />
+    <property name="project.name" value="Line"/>
+    <property name="main.name" value="LineTest"/>
+    <property name="package.name" value="com.tw.geometry"/>
 
     <target name="build" depends="clean">
         <mkdir dir="out"/>

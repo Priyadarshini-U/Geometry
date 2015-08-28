@@ -2,10 +2,7 @@ package com.tw.geometry;
 
 import java.util.Random;
 
-import static java.lang.Math.*;
-
 public class Line {
-
     private Point p1, p2;
 
     public Line(double x1, double y1, double x2, double y2) {
@@ -19,9 +16,9 @@ public class Line {
 
     @Override
     public boolean equals(Object that) {
-        if(this == that)
+        if (this == that)
             return true;
-        if(that != null) {
+        if (that != null) {
             Line thatLine = that instanceof Line ? (Line) that : null;
             if (thatLine != null) {
                 if (this.p1.equals(thatLine.p1) && this.p2.equals(thatLine.p2))
@@ -34,9 +31,9 @@ public class Line {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         Random generator1 = new Random(p1.hashCode());
         Random generator2 = new Random(p2.hashCode());
-        return generator1.nextInt() * generator1.nextInt();
+        return generator1.nextInt() * generator2.nextInt();
     }
 }
