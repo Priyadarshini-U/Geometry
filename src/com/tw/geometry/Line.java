@@ -1,5 +1,7 @@
 package com.tw.geometry;
 
+import java.util.Random;
+
 import static java.lang.Math.*;
 
 public class Line {
@@ -29,5 +31,12 @@ public class Line {
             }
         }
         return false;
+    }
+
+    @Override
+    public int hashCode(){
+        Random generator1 = new Random(p1.hashCode());
+        Random generator2 = new Random(p2.hashCode());
+        return generator1.nextInt() * generator1.nextInt();
     }
 }

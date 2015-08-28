@@ -1,5 +1,7 @@
 package com.tw.geometry;
 
+import java.util.Random;
+
 import static java.lang.Math.*;
 
 public class Point {
@@ -26,5 +28,12 @@ public class Point {
                 return (this.x == thatPoint.x) && (this.y == thatPoint.y);
         }
         return false;
+    }
+
+    @Override
+    public int hashCode(){
+        Random generator1 = new Random((long) x);
+        Random generator2 = new Random((long) y);
+        return generator1.nextInt() * generator1.nextInt();
     }
 }

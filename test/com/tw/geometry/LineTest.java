@@ -102,4 +102,14 @@ public class LineTest {
         assertEquals(line1, line2);
     }
 
+    @Test
+    public void equalsHashCodeWithSameLine() {
+        assertEquals(line1.hashCode(), line1.hashCode());
+    }
+
+    @Test
+    public void equalsHashCodeWithSimilarAndEqualLine() {
+        assertEquals(line1.hashCode(), line2.hashCode());
+    }
+
 }

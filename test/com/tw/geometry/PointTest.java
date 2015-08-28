@@ -96,6 +96,13 @@ public class PointTest {
         assertEquals(point2, point1);
     }
 
+    @Test
+    public void equalsHashCodeWithSamePoint() {
+        assertEquals(point1.hashCode(), point1.hashCode());
+    }
 
-
+    @Test
+    public void equalsHashCodeWithSimilarAndEqualPoint() {
+        assertEquals(point1.hashCode(), point2.hashCode());
+    }
 }
