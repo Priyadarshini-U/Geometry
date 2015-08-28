@@ -29,6 +29,8 @@ public class Line {
                 return true;
             if(this.x1 == thatLine.x2 && this.x2 == thatLine.x1)
                 return true;
+            if(this.y1 == thatLine.y1 && this.y2 == thatLine.y2)
+                return true;
         }
         return false;
     }
