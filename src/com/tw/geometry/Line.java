@@ -23,6 +23,9 @@ public class Line {
             return true;
         if(that == null)
             return false;
+        Line thatLine = that instanceof Line ? (Line) that: null;
+        if(thatLine == null)
+            return false;
         return false;
     }
 

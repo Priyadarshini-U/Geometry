@@ -40,6 +40,12 @@ public class LineTest {
         assertNotEquals(line, null);
     }
 
+    @Test
+    public void unequalsInvalidObject() {
+        Line line = new Line(1, 1, 2, 2);
+        assertNotEquals(line, new Object());
+    }
+
 
 
 }
