@@ -14,11 +14,7 @@ public class Line {
     }
 
     public double length() {
-        if(x1 == x2)
-            return abs(y2 - y1);
-        if(y1 == y2)
-            return abs(x2 - x1);
-        return 0;
+        return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     }
 
 }

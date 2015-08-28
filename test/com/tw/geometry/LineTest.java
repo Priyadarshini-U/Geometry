@@ -23,6 +23,10 @@ public class LineTest {
         assertEquals(1, new Line(1, 1, 2, 1).length(), 0.0);
     }
 
+    @Test
+    public void shouldHaveActualLengthForLineNotParallelToXAndYAxis() {
+        assertEquals(sqrt(2), new Line(1, 1, 2, 2).length(), 0.0);
+    }
 
 
 }
