@@ -81,4 +81,12 @@ public class LineTest {
         assertEquals(line1, line2);
     }
 
+    @Test
+    public void equalsLineWithSameYAndYCoordinates() {
+        Line line1 = new Line(1, 1, 2, 2);
+        Line line2 = new Line(2, 2, 1, 1);
+
+        assertEquals(line1, line2);
+    }
+
 }
