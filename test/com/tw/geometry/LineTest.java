@@ -7,8 +7,8 @@ import static java.lang.Math.*;
 
 public class LineTest {
 
-    Line line1 = new Line(new Point(1, 1), new Point(2, 2));
-    Line line2 = new Line(new Point(1, 1), new Point(2, 2));
+    private Line line1 = new Line(new Point(1, 1), new Point(2, 2));
+    private Line line2 = new Line(new Point(1, 1), new Point(2, 2));
 
     @Test
     public void shouldHaveLengthZeroForLineWithSameCoordinates() {
@@ -94,7 +94,7 @@ public class LineTest {
     @Test
     public void equalsLineWithSameYAndYCoordinates() {
         Line line1 = new Line(new Point(1, 1), new Point(2, 2));
-        Line line2 = new Line(new Point(2, 2), new Point(1, 1));
+        Line line2 = new Line(new Point(2, 2), new Point(1, 1))  ;
 
         assertEquals(line1, line2);
     }

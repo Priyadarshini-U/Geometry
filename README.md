@@ -13,9 +13,9 @@
 ##Build CodeBase
 
     From project Home Directory
-    > ant build
+    > ant
 
 ##Run automated Test script
 
     From project Home Directory
-        > ant runjUnit
+    > ant runjUnit

@@ -1,6 +1,6 @@
 *.iml
 .idea/
 out/
-.Ds_store
+.DS_Store
 result.*
 TEST-*
