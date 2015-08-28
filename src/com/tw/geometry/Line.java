@@ -25,11 +25,11 @@ public class Line {
             return false;
         Line thatLine = that instanceof Line ? (Line) that: null;
         if(thatLine != null){
-            if( this.x1 == thatLine.x1 && this.x2 == thatLine.x2)
+            if(this.x1 == thatLine.x1 && this.x2 == thatLine.x2)
+                return true;
+            if(this.x1 == thatLine.x2 && this.x2 == thatLine.x1)
                 return true;
         }
-
-
         return false;
     }
 
