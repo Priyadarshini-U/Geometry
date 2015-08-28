@@ -6,6 +6,8 @@ import static java.lang.Math.sqrt;
 import static org.junit.Assert.*;
 
 public class PointTest {
+    Point point1 = new Point(1,2);
+    Point point2 = new Point(1,2);
 
     @Test
     public void shouldHaveDistanceZeroForItself() {
@@ -82,6 +84,16 @@ public class PointTest {
         Point point2 = new Point(1,2);
 
         assertEquals(point1, point2);
+    }
+
+    @Test
+    public void equatesPoint() {
+        assertEquals(point1, point2);
+    }
+
+    @Test
+    public void equalsPointThatEquatesToThisPoint() {
+        assertEquals(point2, point1);
     }
 
 
