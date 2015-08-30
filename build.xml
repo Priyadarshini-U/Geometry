@@ -2,7 +2,6 @@
 <project name="Line" default="runjUnit" basedir=".">
 
     <property name="project.name" value="Line"/>
-    <property name="main.name" value="LineTest"/>
     <property name="package.name" value="com.tw.geometry"/>
 
     <target name="build" depends="clean">
@@ -15,16 +14,6 @@
 
     <target name="clean" description="clean previous output directory">
         <delete dir="out"/>
-    </target>
-
-    <target name="build-jar" depends="build">
-        <jar destfile="lib/${project.name}.jar"
-             basedir="out"
-             excludes="**/Test.class">
-            <manifest>
-                <attribute name="Main-Class" value="${package.name}.main.${main.name}"/>
-            </manifest>
-        </jar>
     </target>
 
     <target name="runjUnit" depends="build">

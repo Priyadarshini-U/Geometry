@@ -8,14 +8,14 @@
 ##Pre-Requisites
 
     1.Java JDK
-    1.Apache ant
+    2.Apache ant
 
 ##Build CodeBase
 
     From project Home Directory
-    > ant
+    * ant *
 
 ##Run automated Test script
 
     From project Home Directory
-    > ant runjUnit
+    * ant runjUnit *
