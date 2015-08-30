@@ -6,7 +6,6 @@ import static org.junit.Assert.*;
 import static java.lang.Math.*;
 
 public class LineTest {
-
     private Line line1 = new Line(new Point(1, 1), new Point(2, 2));
     private Line line2 = new Line(new Point(1, 1), new Point(2, 2));
 
